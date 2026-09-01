@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Menu</title>
+    <style>
+    
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f8fafc;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+
+        .dish-card {
+            background: white;
+            padding: 1.2rem 1.5rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .dish-card h3 {
+            color: #0b2a4a;
+            margin-bottom: 0.25rem;
+        }
+
+        .dish-card .price {
+            font-weight: 700;
+            color: #1B4D8E;
+        }
+
+        .dish-card p {
+            color: #475569;
+            font-size: 0.95rem;
+            margin: 0.4rem 0;
+        }
+
+        @media (hover: hover) {
+            .dish-card:hover {
+                transform: translateY(-6px) scale(1.01);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                transform: none !important;
+            }
+        }
+    
+
+        @media (min-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Menu</h1>
+    <div class="menu-grid">
+        <div class="dish-card">
+            <h3>Doro Wat</h3>
+            <p>Spicy chicken stew with boiled egg</p>
+            <span class="price">ETB 320</span>
+        </div>
+        <div class="dish-card">
+            <h3>Kitfo</h3>
+            <p>Minced raw beef with spiced butter</p>
+            <span class="price">ETB 280</span>
+        </div>
+        <div class="dish-card">
+            <h3>Tibs</h3>
+            <p>Pan‑fried beef with onions & peppers</p>
+            <span class="price">ETB 350</span>
+        </div>
+        <div class="dish-card">
+            <h3>Shiro</h3>
+            <p>Chickpea stew with berbere</p>
+            <span class="price">ETB 180</span>
+        </div>
+        <div class="dish-card">
+            <h3>Firfir</h3>
+            <p>Shredded injera with spicy sauce</p>
+            <span class="price">ETB 150</span>
+        </div>
+        <div class="dish-card">
+            <h3>Beyaynet</h3>
+            <p>Vegan platter with assorted vegetables</p>
+            <span class="price">ETB 260</span>
+        </div>
+    </div>
+</body>
+</html>

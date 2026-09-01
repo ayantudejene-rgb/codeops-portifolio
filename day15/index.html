@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habesha Eatery</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍽️ Habesha Eatery</div>
+            <nav class="nav-links">
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#reservations">Reservations</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Taste <span class="highlight">Ethiopia</span></h1>
+                <p>Authentic flavours from the heart of Addis Ababa.</p>
+                <a href="#reservations" class="cta-btn">Book a Table</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Our Story</h2>
+                <p>
+                    Habesha Eatery brings the rich traditions of Ethiopia to
+                    Bole, Addis Ababa. Every dish is prepared with love, using family
+                    recipes passed down through generations. We believe in community,
+                    hospitality, and the joy of sharing a meal.
+                </p>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <h3>Doro Wat</h3>
+                        <p>Spicy chicken stew with boiled egg</p>
+                        <span class="price">ETB 320</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Kitfo</h3>
+                        <p>Minced raw beef with spiced butter</p>
+                        <span class="price">ETB 280</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Tibs</h3>
+                        <p>Pan‑fried beef with onions & peppers</p>
+                        <span class="price">ETB 350</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Shiro</h3>
+                        <p>Chickpea stew with berbere</p>
+                        <span class="price">ETB 180</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Firfir</h3>
+                        <p>Shredded injera with spicy sauce</p>
+                        <span class="price">ETB 150</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Beyaynetu</h3>
+                        <p>Vegan platter with assorted vegetables</p>
+                        <span class="price">ETB 260</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reservations" class="reservations">
+            <div class="container">
+                <h2>Make a Reservation</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of guests</label>
+                        <input type="number" id="guests" min="1" max="20" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required />
+                    </div>
+                    <button type="submit" class="cta-btn">Reserve</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Habesha Eatery</h4>
+                <p>Bole Medhanialem, Addis Ababa</p>
+                <p>📞 +251 911 234 567</p>
+                <p>🕐 07:00 – 22:00 daily</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow us</h4>
+                <p>Instagram · Facebook · Twitter</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            2026 Habesha Eatery. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

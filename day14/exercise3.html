@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 20px auto;
+            font-family: system-ui, sans-serif;
+        }
+
+        .gallery-item {
+            background: #1B4D8E;
+            color: white;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">📸</div>
+        <div class="gallery-item">📸</div>
+        <div class="gallery-item">📸</div>
+        <div class="gallery-item">📸</div>
+        <div class="gallery-item">📸</div>
+        <div class="gallery-item">📸</div>
+    </div>
+    <p style="font-family:system-ui; text-align:center;">Resize the window – columns adjust automatically.</p>
+</body>
+</html>

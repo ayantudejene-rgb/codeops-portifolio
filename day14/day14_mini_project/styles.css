@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+    gap: 0;
+}
+
+.app-header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #1B4D8E;
+    color: white;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.app-sidebar {
+    grid-area: sidebar;
+    background: #ffffff;
+    padding: 24px 20px;
+    border-right: 1px solid #e2e8f0;
+}
+
+.app-sidebar h3 {
+    margin-bottom: 16px;
+    color: #0b2a4a;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.app-main {
+    grid-area: main;
+    padding: 24px 28px;
+    background: #f8fafc;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.flight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.flight-card {
+    position: relative;
+    background: white;
+    padding: 16px 18px 18px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    transition: box-shadow 0.2s;
+}
+
+.flight-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.flight-card h4 {
+    color: #0b2a4a;
+    margin-bottom: 4px;
+}
+
+.flight-card .price {
+    font-weight: 700;
+    color: #1B4D8E;
+    margin-top: 8px;
+}
+
+.flight-card .badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #D4A027;
+    color: white;
+    font-weight: 700;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.app-footer {
+    grid-area: footer;
+    background: #0b2a4a;
+    color: rgba(255,255,255,0.7);
+    padding: 16px 24px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .app {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .app-header {
+        position: sticky;
+        top: 0;
+    }
+
+    .app-sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .flight-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}

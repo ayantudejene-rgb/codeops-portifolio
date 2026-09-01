@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            min-height: 100vh;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            gap: 8px;
+            min-height: 100vh;
+            padding: 8px;
+        }
+
+        .header {
+            grid-area: header;
+            background: #1B4D8E;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background: #e2e8f0;
+            padding: 20px;
+        }
+        .main {
+            grid-area: main;
+            background: #f8fafc;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .footer {
+            grid-area: footer;
+            background: #0b2a4a;
+            color: white;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .layout {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <header class="header">Header</header>
+        <aside class="sidebar">Sidebar</aside>
+        <main class="main">Main content</main>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --brand: hsl(212, 68%, 33%);
+    --brand-hover: hsl(212, 68%, 45%);  /* only lightness changes */
+    --space: 16px;
+    --radius: 12px;
+    --font-base: 'Inter', system-ui, sans-serif;
+}
+
+body {
+    font-family: var(--font-base);
+    line-height: 1.6;
+    background: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.card {
+    max-width: 360px;
+    width: 100%;
+    padding: var(--space);
+    margin: 0 auto;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius);
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    position: relative;
+}
+
+.card::before {
+    content: "✦";
+    display: block;
+    font-size: 1.8rem;
+    color: hsl(42, 75%, 48%);
+    margin-bottom: 0.1rem;
+    line-height: 1;
+}
+
+.name {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #0b2a4a;
+    margin: 0 0 0.1rem;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--brand);
+    margin: 0 0 0.6rem;
+}
+
+.body-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #1e293b;
+    margin: 0.6rem 0 1.2rem;
+}
+
+.contact-btn {
+    font-family: var(--font-base);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--brand);
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 6px rgba(27, 77, 142, 0.25);
+}
+
+.contact-btn:hover {
+    background: var(--brand-hover);  /* lightness 33% → 45% */
+    transform: scale(1.02);
+}
+
+.contact-btn:focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+}

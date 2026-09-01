@@ -1,0 +1,36 @@
+<!--exercise-1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        :root {
+            --color-primary: #1B4D8E;
+            --color-accent: #D4A027;
+            --spacing: 16px;
+            --font-stack: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        .btn {
+            font-family: var(--font-stack);
+            background: var(--color-primary);
+            color: white;
+            padding: var(--spacing) calc(var(--spacing) * 2);
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--color-accent);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Styled Button</button>
+</body>
+</html>

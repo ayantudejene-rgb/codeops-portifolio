@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+    <style>
+        .palette {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-family: system-ui, sans-serif;
+        }
+
+        .swatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transition: background 0.2s;
+        }
+
+        .box.hover-shade:hover {
+            background: var(--hover-color) !important;
+        }
+
+        .info {
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="palette">
+
+        <div class="swatch">
+            <div class="box" style="background: #1B4D8E;"></div>
+            <div class="info">
+                <strong>#1B4D8E</strong><br>
+                rgb(27, 77, 142)<br>
+                hsl(212, 68%, 33%)
+            </div>
+            <div class="box hover-shade" style="--hover-color: hsl(212, 68%, 45%);"></div>
+            <div class="info" style="font-size:0.7rem;">hover: hsl(212, 68%, 45%)</div>
+        </div>
+
+        <div class="swatch">
+            <div class="box" style="background: #D4A027;"></div>
+            <div class="info">
+                <strong>#D4A027</strong><br>
+                rgb(212, 160, 39)<br>
+                hsl(42, 75%, 48%)
+            </div>
+            <div class="box hover-shade" style="--hover-color: hsl(42, 75%, 60%);"></div>
+            <div class="info" style="font-size:0.7rem;">hover: hsl(42, 75%, 60%)</div>
+        </div>
+
+        <div class="swatch">
+            <div class="box" style="background: #2E8B57;"></div>
+            <div class="info">
+                <strong>#2E8B57</strong><br>
+                rgb(46, 139, 87)<br>
+                hsl(146, 50%, 36%)
+            </div>
+            <div class="box hover-shade" style="--hover-color: hsl(146, 50%, 48%);"></div>
+            <div class="info" style="font-size:0.7rem;">hover: hsl(146, 50%, 48%)</div>
+        </div>
+
+    </div>
+    <p style="font-family:system-ui; margin-top:1rem;"><em>Hover each lower swatch to see the lightness‑only increase.</em></p>
+</body>
+</html>

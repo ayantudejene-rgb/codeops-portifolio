@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservations — Habesha Eatery, Bole</title>
+<meta name="description" content="Reserve a table at Habesha Eatery in Bole, Addis Ababa.">
+</head>
+<body>
+<header><h1>Habesha Eatery</h1></header>
+<nav aria-label="Main navigation"><a href="index.html">Reservations</a> <a href="contact.html">Contact</a></nav>
+<main>
+<section id="reservation">
+<h2>Reserve a Table</h2>
+<form action="/reservation" method="post">
+<fieldset><legend>Reservation details</legend>
+<label for="name">Full name</label><input id="name" name="name" type="text" required><br><br>
+<label for="email">Email</label><input id="email" name="email" type="email" required><br><br>
+<label for="phone">Phone</label><input id="phone" name="phone" type="tel" pattern="\+251[0-9]{9}" aria-describedby="phone-help" required>
+<p id="phone-help">Format: +251 followed by 9 digits.</p>
+<label for="date">Reservation date</label><input id="date" name="date" type="date" required><br><br>
+<label for="party-size">Party size</label><input id="party-size" name="party_size" type="number" min="1" max="12" required><br><br>
+<button type="submit">Reserve Table</button>
+</fieldset>
+</form>
+</section>
+<section id="menu">
+<h2>Menu</h2>
+<table><caption>Habesha Eatery — main menu</caption>
+<thead><tr><th scope="col">Dish</th><th scope="col">Price (ETB)</th></tr></thead>
+<tbody><tr><th scope="row">Doro Wat</th><td>320</td></tr><tr><th scope="row">Shiro</th><td>180</td></tr><tr><th scope="row">Tibs</th><td>360</td></tr></tbody>
+</table>
+</section>
+<section id="media">
+<h2>Our Food and Location</h2>
+<figure><img src="doro-wat.jpg" alt="A plate of doro wat served on injera" width="640" height="420" loading="lazy"><figcaption>Doro wat served on traditional Ethiopian injera.</figcaption></figure>
+<iframe src="https://maps.example/embed?q=Bole,Addis+Ababa" title="Map showing Habesha Eatery in Bole" width="100%" height="320" loading="lazy"></iframe>
+</section>
+</main>
+<footer><p>Bole, Addis Ababa · +251 911 234 567</p></footer>
+</body>
+</html>

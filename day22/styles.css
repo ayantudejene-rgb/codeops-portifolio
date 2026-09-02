@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#app {
+    max-width: 650px;
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+h1 {
+    color: #0b2a4a;
+    margin-bottom: 0.5rem;
+}
+
+#status {
+    min-height: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+#status.error {
+    color: #b33b3b;
+}
+#status.loading {
+    color: #64748b;
+    font-style: italic;
+}
+
+#converter {
+    margin-bottom: 2rem;
+}
+#convertForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+#convertForm input,
+#convertForm select {
+    padding: 0.6rem;
+    border: 1px solid #d1d9e6;
+    border-radius: 6px;
+    font-size: 1rem;
+    flex: 1 1 120px;
+}
+#convertForm button {
+    padding: 0.6rem 1.2rem;
+    background: #1B4D8E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#convertForm button:hover {
+    background: #143b6b;
+}
+#result {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0b2a4a;
+    min-height: 2rem;
+}
+
+#watchlistSection {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.2rem;
+}
+#watchlistHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+#watchlistHeader h2 {
+    font-size: 1.2rem;
+    color: #0b2a4a;
+}
+#watchlistHeader > div {
+    display: flex;
+    gap: 0.3rem;
+}
+#watchlistHeader input {
+    width: 100px;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #d1d9e6;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+#watchlistHeader button {
+    padding: 0.4rem 0.8rem;
+    background: #1B4D8E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#watchlistHeader button:hover {
+    background: #143b6b;
+}
+
+#watchlist {
+    list-style: none;
+    padding: 0;
+}
+#watchlist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.6rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+#watchlist li:last-child {
+    border-bottom: none;
+}
+#watchlist .empty-msg {
+    color: #94a3b8;
+    font-style: italic;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+#watchlist .remove-btn {
+    background: none;
+    border: none;
+    color: #b33b3b;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0 0.3rem;
+}
+#watchlist .remove-btn:hover {
+    color: #8a1f1f;
+}

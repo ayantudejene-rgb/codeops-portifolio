@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Toggle</title>
+</head>
+<body>
+    <label for="lang">Choose language:</label>
+    <select id="lang">
+        <option value="en">English</option>
+        <option value="am">አማርኛ</option>
+    </select>
+
+    <script>
+        const select = document.getElementById('lang');
+        const saved = localStorage.getItem('lang');
+        if (saved) select.value = saved;
+        select.addEventListener('change', () => {
+            localStorage.setItem('lang', select.value);
+        });
+    </script>
+</body>
+</html>

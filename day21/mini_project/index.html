@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup – Mini Project</title>
+    <style>
+        .error { color: #b33b3b; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+    <form id="signupForm">
+        <div>
+            <label for="name">Full name</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="phone">Phone (Ethiopian)</label>
+            <input type="tel" id="phone" required>
+        </div>
+        <button type="submit">Sign up</button>
+        <div id="errorMsg" class="error"></div>
+        <div id="countDisplay"></div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

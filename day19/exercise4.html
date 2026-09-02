@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4</title>
+    <style>
+        .del { margin-left: 12px; cursor: pointer; color: red; }
+    </style>
+</head>
+<body>
+    <ul id="taskList">
+        <li>Task 1 <button class="del">✕</button></li>
+        <li>Task 2 <button class="del">✕</button></li>
+        <li>Task 3 <button class="del">✕</button></li>
+    </ul>
+
+    <script>
+        const list = document.querySelector('#taskList');
+
+        list.addEventListener('click', (e) => {
+            if (e.target.matches('.del')) {
+                e.target.closest('li').remove();
+            }
+        });
+    </script>
+</body>
+</html>

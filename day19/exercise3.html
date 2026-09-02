@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="child">Click me</button>
+    </div>
+
+    <script>
+        const parent = document.querySelector('#parent');
+        const child = document.querySelector('#child');
+
+        child.addEventListener('click', (e) => {
+            console.log('Child clicked, target:', e.target);
+        });
+
+        parent.addEventListener('click', (e) => {
+            console.log('Parent clicked, target:', e.target);
+        });
+    </script>
+</body>
+</html>

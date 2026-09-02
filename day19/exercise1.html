@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+    <style>
+        .highlight { color: #1B4D8E; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1 id="title">Original Title</h1>
+    <button onclick="doStuff()">Click me</button>
+
+    <script>
+        function doStuff() {
+            const h1 = document.querySelector('#title');
+            h1.textContent = 'Selam, Addis!';
+            h1.classList.toggle('highlight');
+        }
+    </script>
+</body>
+</html>

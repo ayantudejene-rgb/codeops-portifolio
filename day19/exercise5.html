@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body>
+    <form id="itemForm">
+        <input type="text" id="itemInput" placeholder="Add item">
+        <button type="submit">Add</button>
+    </form>
+    <ul id="itemList"></ul>
+
+    <script>
+        const form = document.querySelector('#itemForm');
+        const input = document.querySelector('#itemInput');
+        const list = document.querySelector('#itemList');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = input.value.trim();
+            if (!text) return;
+            const li = document.createElement('li');
+            li.textContent = text;
+            list.append(li);
+            input.value = '';
+        });
+    </script>
+</body>
+</html>

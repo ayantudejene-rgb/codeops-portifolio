@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <ul id="cityList"></ul>
+
+    <script>
+        const cities = ['Addis Ababa', 'Bahir Dar', 'Gondar'];
+        const list = document.querySelector('#cityList');
+
+        for (const city of cities) {
+            const li = document.createElement('li');
+            li.textContent = city;
+            list.append(li);
+        }
+    </script>
+</body>
+</html>

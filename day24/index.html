@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addis Eats</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🍽️ Addis Eats</h1>
+            <input type="text" id="searchInput" placeholder="Search dishes..." aria-label="Search menu" />
+        </header>
+
+        <main>
+            <section id="menuSection" aria-label="Menu">
+                <div id="menuStatus"></div>
+                <div id="menuGrid"></div>
+            </section>
+
+            <aside id="cartSection" aria-label="Your order">
+                <h2>Your Cart</h2>
+                <ul id="cartList"></ul>
+                <div id="cartTotal">Total: <span id="totalAmount">0</span> ETB</div>
+
+                <form id="checkoutForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" placeholder="e.g. Almaz Bekele" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (TeleBirr)</label>
+                        <input type="tel" id="phone" placeholder="09xxxxxxxx or +2519xxxxxxxx" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Delivery area</label>
+                        <select id="area">
+                            <option value="Bole">Bole</option>
+                            <option value="Kazanchis">Kazanchis</option>
+                            <option value="Megenagna">Megenagna</option>
+                            <option value="Piassa">Piassa</option>
+                        </select>
+                    </div>
+                    <div id="formError" class="error" aria-live="polite"></div>
+                    <button type="submit" id="placeOrderBtn">Place Order</button>
+                </form>
+
+                <div id="confirmation" class="confirmation hidden">
+                    <h3>✅ Order placed!</h3>
+                    <p id="confirmationMessage"></p>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>Bole, Addis Ababa · TeleBirr accepted</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #0b2a4a;
+}
+
+form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+form input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #d1d9e6;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 0.6rem 1.2rem;
+    background: #1B4D8E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: #143b6b;
+}
+
+#facts {
+    min-height: 120px;
+}
+
+#facts .loading {
+    color: #64748b;
+    font-style: italic;
+}
+
+#facts .error {
+    color: #b33b3b;
+    font-weight: 600;
+}
+
+#facts .fact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#facts .fact-item:last-child {
+    border-bottom: none;
+}
+
+#facts .fact-label {
+    font-weight: 600;
+    color: #0b2a4a;
+}
+
+#facts .fact-value {
+    color: #1e293b;
+}
+
+#facts .flag {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+    <style>
+        #status { margin-bottom: 1rem; font-weight: bold; }
+        .error { color: #b33b3b; }
+        .success { color: #1B4D8E; }
+    </style>
+</head>
+<body>
+    <div id="status">Ready</div>
+    <div id="content"></div>
+    <button onclick="loadData()">Load Data</button>
+
+    <script>
+        const statusEl = document.getElementById('status');
+        const contentEl = document.getElementById('content');
+
+        async function loadData() {
+            // Show loading
+            statusEl.textContent = 'Loading...';
+            statusEl.className = '';
+            contentEl.textContent = '';
+
+            try {
+                const url = 'https://restcountries.com/v3.1/name/ethiopia';
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+                const data = await res.json();
+                const country = data[0];
+
+                statusEl.textContent = '✔ Data loaded';
+                statusEl.className = 'success';
+                contentEl.innerHTML = `
+                    <p><strong>Name:</strong> ${country.name.common}</p>
+                    <p><strong>Capital:</strong> ${country.capital?.[0] || 'N/A'}</p>
+                    <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+                `;
+            } catch (err) {
+                statusEl.textContent = `✖ Error: ${err.message}`;
+                statusEl.className = 'error';
+                contentEl.textContent = 'Could not load data. Try again.';
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+</html>

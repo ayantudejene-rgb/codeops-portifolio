@@ -1,0 +1,10 @@
+[
+    { "id": 1, "name": "Doro Wat", "category": "Main", "price": 240, "spicy": true },
+    { "id": 2, "name": "Shiro", "category": "Vegetarian", "price": 120, "spicy": false },
+    { "id": 3, "name": "Tibs", "category": "Main", "price": 280, "spicy": true },
+    { "id": 4, "name": "Kitfo", "category": "Main", "price": 320, "spicy": true },
+    { "id": 5, "name": "Firfir", "category": "Breakfast", "price": 150, "spicy": true },
+    { "id": 6, "name": "Beyaynetu", "category": "Vegetarian", "price": 200, "spicy": false },
+    { "id": 7, "name": "Chechebsa", "category": "Breakfast", "price": 110, "spicy": false },
+    { "id": 8, "name": "Gored Gored", "category": "Main", "price": 340, "spicy": true }
+]
